@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   create_stack.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jclement <jclement@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/10 18:54:35 by jclement          #+#    #+#             */
+/*   Updated: 2022/10/10 18:54:37 by jclement         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 t_stack *create_node(void)
@@ -46,7 +58,8 @@ int find_index(char **argv, int argc, int num)
 
   i = 1;
   index = 0;
-  while (i < argc) {
+  while (i < argc)
+  {
     if (atoi(argv[i]) < num)
       index++;
     i++;

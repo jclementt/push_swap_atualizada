@@ -4,6 +4,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+#include <string.h>
 
 typedef struct s_stack 
 {
@@ -12,7 +13,7 @@ typedef struct s_stack
   struct s_stack *next;
 } t_stack;
 
-t_stack 	*create_node();
+t_stack 	*create_node(void);
 void 		print_stack(t_stack *stack); //exclui
 void 		ft_swap(int *a, int *b);
 int 		sab(t_stack *ab);
@@ -31,7 +32,7 @@ int 		check_argv(char *str);
 void		stack_free(t_stack **stack);
 int			ft_atoi(const char *str);
 int			list_size(t_stack *stack);
-void		sort_three(t_stack **list, int len);
+void		sort_three(t_stack **list);
 int			find_max_number(t_stack **list);
 int			*find_min_number(t_stack **list);
 void		sort_short(t_stack **stack, int len);
@@ -48,5 +49,6 @@ void		sort_five_2(t_stack **a, t_stack **b);
 int			ft_strcmp(const char *s1, const char *s2);
 void		apply_operations(t_stack **a, t_stack **b, char *op);
 void 		sort_methods(t_stack **stack, int len);
+int			argv_len(char **argv);
 
 #endif

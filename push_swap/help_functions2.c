@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   help_functions2.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jclement <jclement@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/10 18:54:06 by jclement          #+#    #+#             */
+/*   Updated: 2022/10/10 19:14:35 by jclement         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int checks_order(t_stack *list)
@@ -61,9 +73,9 @@ int max_bits_size(t_stack **list)
 	return (res);
 }
 
-int *find_min_number(t_stack **list) {
+int *find_min_number(t_stack **list)
+{
   int *min;
-  int swap;
   t_stack *tmp;
 
   min = malloc(2 * sizeof(int));
@@ -88,3 +100,4 @@ int *find_min_number(t_stack **list) {
 	}
     return (min);
 }
+

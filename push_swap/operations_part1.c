@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   operations_part1.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jclement <jclement@student.42.rio>         +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/10/10 18:53:35 by jclement          #+#    #+#             */
+/*   Updated: 2022/10/10 19:22:29 by jclement         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 int sab(t_stack *ab) 
@@ -44,3 +56,33 @@ int pab(t_stack **a, t_stack **b)
 	}
 	return (0);
 }
+
+    void    apply_operations(t_stack **a, t_stack **b, char *op)
+{
+    if (!ft_strcmp(op, "pa"))
+    {
+        pab(a, b);
+        write(1, "pa\n", 3);
+    }
+    else if (!ft_strcmp(op, "pb"))
+    {
+        pab(b, a);
+        write(1, "pb\n", 3);
+    }
+    else if (!ft_strcmp(op, "ra"))
+    {
+        rab(a);
+        write(1, "ra\n", 3);
+    }
+    else if (!ft_strcmp(op, "rra"))
+    {
+        rrab(a);
+        write(1, "rra\n", 4);
+    }
+    else if (!ft_strcmp(op, "rrb"))
+    {
+        rrab(b);
+        write(1, "rrb\n", 4);
+    }
+}
+
